@@ -65,6 +65,7 @@ module.exports.daemonReload = daemonReload;
 module.exports.disable = disable;
 module.exports.enable = enable;
 module.exports.isEnabled = isEnabled;
+module.exports.isActive = isActive;
 module.exports.restart = restart;
 module.exports.start = start;
 module.exports.stop = stop;
