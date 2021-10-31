@@ -1,16 +1,16 @@
 var Promise = require('bluebird')
 var run = require('./run')
 
-function daemonReload() {
-    return run("daemon-reload");
+function daemonReload(sudo=false) {
+    return run("daemon-reload", "", sudo);
 }
 
-function disable(serviceName) {
-    return run("disable", serviceName);
+function disable(serviceName, sudo=false) {
+    return run("disable", serviceName, sudo);
 }
 
-function enable(serviceName) {
-    return run("enable", serviceName);
+function enable(serviceName, sudo=false) {
+    return run("enable", serviceName, sudo);
 }
 
 function isEnabled(serviceName) {
